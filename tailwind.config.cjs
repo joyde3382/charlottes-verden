@@ -27,10 +27,11 @@ module.exports = {
 	darkMode: 'class',
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
+		,"./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",
 		// 2. Append the path for the Skeleton NPM package and files:
 		require('path').join(require.resolve(
 			'@skeletonlabs/skeleton'),
-			'../**/*.{html,js,svelte,ts}'
+			// '../**/*.{html,js,svelte,ts}'
 		)
 	],
 	
@@ -41,6 +42,6 @@ module.exports = {
 			}
 		},
 	},
-	plugins: [forms,typography, ...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()],
+	plugins: [forms,typography, require('flowbite/plugin'), ...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()],
 }
 

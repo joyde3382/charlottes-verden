@@ -3,14 +3,14 @@
 	import ProductCard from "$lib/product/productCard.svelte";
 	// import { cartItems } from '../cart';
 	import type { PageData } from './$types';
-
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 	export let data: PageData;
 	const { products } = data;
 
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
-	
+	<LightSwitch />
 	<div class="grid grid-cols-3 gap-4">
 		<div class="col-span-3">
 			<h1>SvelteKit 1.0 Store</h1>
